@@ -1,0 +1,9 @@
+Lumen ARIA Blocks repository
+
+License: GPL-2.0-or-later
+
+This repository contains WordPress plugin and tooling code distributed under the
+GNU General Public License, version 2 or (at your option) any later version.
+
+Package-level metadata in WordPress plugin/theme headers remains authoritative
+for runtime distribution.

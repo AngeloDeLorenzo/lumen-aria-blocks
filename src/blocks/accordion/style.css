@@ -1,0 +1,44 @@
+.wp-block-lumen-accordion.lumen-accordion {
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 0.625rem;
+  overflow: visible;
+  background: var(--lumen-bg, #fff);
+}
+
+.wp-block-lumen-accordion [class~="lumen-accordion__heading"] {
+  margin: 0;
+}
+
+.wp-block-lumen-accordion .lumen-accordion-trigger {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.875rem 1rem;
+  background: var(--lumen-bg, #fff);
+  border: 0;
+  border-top: 1px solid var(--lumen-border, #d1d5db);
+  color: var(--lumen-text, #111827);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.16s ease;
+}
+
+.wp-block-lumen-accordion .lumen-accordion-trigger.open,
+.wp-block-lumen-accordion .lumen-accordion-trigger[aria-expanded="true"] {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 12%, var(--lumen-bg, #fff));
+}
+
+.wp-block-lumen-accordion .lumen-accordion-trigger:hover {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 8%, var(--lumen-bg, #fff));
+}
+
+.wp-block-lumen-accordion [class~="lumen-accordion__heading"]:first-child .lumen-accordion-trigger {
+  border-top: 0;
+}
+
+.wp-block-lumen-accordion [class~="lumen-accordion__panel"] {
+  padding: 1rem;
+  border-top: 1px solid var(--lumen-border, #d1d5db);
+  background: var(--lumen-bg, #fff);
+  color: var(--lumen-text, #111827);
+}

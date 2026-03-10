@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/tooltip",
+  "version": "0.4.0",
+  "title": "Tooltip",
+  "category": "lumen-accessibility",
+  "icon": "editor-help",
+  "description": "Accessible tooltip with runtime enhancement and keyboard-safe fallback.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "triggerText": {
+      "type": "string",
+      "default": "What is this?"
+    },
+    "triggerAriaLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "tooltipText": {
+      "type": "string",
+      "default": "Use this field to provide extra context about the current action."
+    },
+    "mode": {
+      "type": "string",
+      "default": "hover"
+    },
+    "manualClose": {
+      "type": "boolean",
+      "default": true
+    },
+    "delay": {
+      "type": "number",
+      "default": 250
+    },
+    "delayTimeout": {
+      "type": "number",
+      "default": 3000
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

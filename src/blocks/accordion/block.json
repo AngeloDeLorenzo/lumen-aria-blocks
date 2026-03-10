@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/accordion",
+  "version": "0.4.0",
+  "title": "Accordion",
+  "category": "lumen-accessibility",
+  "icon": "list-view",
+  "description": "Accessible accordion with ARIA-aware controls and keyboard support.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "allowMultiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "openFirst": {
+      "type": "boolean",
+      "default": true
+    },
+    "singleTabStop": {
+      "type": "boolean",
+      "default": false
+    },
+    "isToggle": {
+      "type": "boolean",
+      "default": false
+    },
+    "trackPage": {
+      "type": "boolean",
+      "default": false
+    },
+    "trackPageMode": {
+      "type": "string",
+      "default": "replace"
+    },
+    "headingLevel": {
+      "type": "number",
+      "default": 3
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Section One",
+          "content": "Section One Content"
+        },
+        {
+          "title": "Section Two",
+          "content": "Section Two Content"
+        },
+        {
+          "title": "Section Three",
+          "content": "Section Three Content"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

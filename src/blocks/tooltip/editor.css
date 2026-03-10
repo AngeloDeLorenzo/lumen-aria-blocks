@@ -1,0 +1,53 @@
+.lumen-block-editor.lumen-block-editor-tooltip {
+  border: 1px dashed #c5ced8;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.lumen-block-editor-title {
+  margin: 0 0 0.25rem;
+}
+
+.lumen-block-editor-help {
+  margin: 0 0 0.8rem;
+  color: #4b5563;
+}
+
+.lumen-block-editor-tooltip-preview {
+  display: grid;
+  gap: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 0.75rem;
+  max-width: 28rem;
+}
+
+.lumen-block-editor-tooltip-trigger {
+  justify-self: start;
+  border: 1px solid #111827;
+  border-radius: 0.375rem;
+  background: #111827;
+  color: #fff;
+  padding: 0.35rem 0.65rem;
+}
+
+.lumen-block-editor-tooltip-badge {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  background: #eef2ff;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lumen-block-editor-tooltip-box {
+  border-radius: 0.5rem;
+  background: #111827;
+  color: #fff;
+  padding: 0.55rem 0.65rem;
+}
+

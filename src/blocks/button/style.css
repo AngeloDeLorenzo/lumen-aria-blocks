@@ -1,0 +1,56 @@
+.wp-block-lumen-button.lumen-button {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.wp-block-lumen-button .lumen-button-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--lumen-accent, #0b5fff);
+  background: var(--lumen-accent, #0b5fff);
+  color: var(--lumen-on-accent, #fff);
+  border-radius: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.2;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.wp-block-lumen-button .lumen-button-trigger:hover {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-button .lumen-button-trigger.pressed,
+.wp-block-lumen-button .lumen-button-trigger[aria-pressed="true"] {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-button .lumen-button-trigger[aria-disabled="true"],
+.wp-block-lumen-button .lumen-button-trigger.is-disabled,
+.wp-block-lumen-button .lumen-button-trigger:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wp-block-lumen-button[class~="lumen-button--fallback"] .lumen-button-trigger {
+  cursor: default;
+}
+
+.wp-block-lumen-button[class~="lumen-button--fallback"] .lumen-button-native {
+  position: static;
+  width: auto;
+  height: auto;
+  margin-left: 0.5rem;
+}

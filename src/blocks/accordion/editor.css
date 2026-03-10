@@ -1,0 +1,30 @@
+.lumen-block-editor.lumen-block-editor-accordion {
+  border: 1px dashed #c5ced8;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.lumen-block-editor-title {
+  margin: 0 0 0.25rem;
+}
+
+.lumen-block-editor-help {
+  margin: 0 0 1rem;
+  color: #4b5563;
+}
+
+.lumen-block-editor-item {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+}
+
+.lumen-block-editor-item-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+

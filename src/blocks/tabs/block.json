@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/tabs",
+  "version": "0.4.0",
+  "title": "Tabs",
+  "category": "lumen-accessibility",
+  "icon": "index-card",
+  "description": "Accessible tabs with keyboard navigation and ARIA semantics.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "orientation": {
+      "type": "string",
+      "default": "horizontal"
+    },
+    "activationMode": {
+      "type": "string",
+      "default": "manual"
+    },
+    "trackPage": {
+      "type": "boolean",
+      "default": false
+    },
+    "trackPageMode": {
+      "type": "string",
+      "default": "replace"
+    },
+    "activeIndex": {
+      "type": "number",
+      "default": 0
+    },
+    "items": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Tab One",
+          "content": "Tab Panel One Content"
+        },
+        {
+          "label": "Tab Two",
+          "content": "Tab Panel Two Content"
+        },
+        {
+          "label": "Tab Three",
+          "content": "Tab Panel Three Content"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

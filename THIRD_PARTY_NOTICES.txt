@@ -1,0 +1,14 @@
+# Third-Party Notices
+
+## Current Bundled Third-Party Libraries
+
+None.
+
+No bundled third-party libraries.
+
+No third-party runtime libraries are bundled in this plugin release payload.
+
+## Distribution Notes
+
+- Lumen plugin code is GPL-2.0-or-later.
+- If any third-party code is bundled in future releases, this file must be updated with component name, source, and license details.

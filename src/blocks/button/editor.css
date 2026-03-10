@@ -1,0 +1,34 @@
+.lumen-block-editor.lumen-block-editor-button {
+  border: 1px dashed #c5ced8;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.lumen-block-editor-title {
+  margin: 0 0 0.25rem;
+}
+
+.lumen-block-editor-help {
+  margin: 0 0 0.75rem;
+  color: #4b5563;
+}
+
+.lumen-block-editor-button-preview {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #111827;
+  background: #111827;
+  color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  font-weight: 600;
+}
+
+.lumen-block-editor-button-preview.is-pressed {
+  background: #0f766e;
+  border-color: #0f766e;
+}
+
+.lumen-block-editor-button-preview.is-disabled {
+  opacity: 0.55;
+}

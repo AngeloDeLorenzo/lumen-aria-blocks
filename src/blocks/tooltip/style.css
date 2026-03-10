@@ -1,0 +1,67 @@
+.wp-block-lumen-tooltip.lumen-tooltip {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.wp-block-lumen-tooltip .lumen-tooltip-trigger {
+  border: 1px solid var(--lumen-accent, #0b5fff);
+  background: var(--lumen-accent, #0b5fff);
+  color: var(--lumen-on-accent, #fff);
+  border-radius: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.wp-block-lumen-tooltip .lumen-tooltip-trigger:hover {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-tooltip.is-open .lumen-tooltip-trigger,
+.wp-block-lumen-tooltip .lumen-tooltip-trigger[aria-expanded="true"] {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-tooltip .lumen-tooltip-template[hidden] {
+  display: none;
+}
+
+.wp-block-lumen-tooltip .lumen-tooltip-popup-fallback {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.45rem);
+  z-index: 1200;
+  min-width: 14rem;
+  max-width: min(28rem, 92vw);
+  background: var(--lumen-bg, #fff);
+  color: var(--lumen-text, #111827);
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+  padding: 0.65rem 0.75rem;
+}
+
+.lumen-tooltip-popup {
+  z-index: 1200;
+  background: var(--lumen-bg, #fff);
+  color: var(--lumen-text, #111827);
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+  padding: 0.65rem 0.75rem;
+  max-width: min(28rem, 92vw);
+}
+
+.wp-block-lumen-tooltip .lumen-tooltip-text,
+.lumen-tooltip-popup .lumen-tooltip-text {
+  margin: 0;
+  color: inherit;
+}

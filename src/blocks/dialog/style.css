@@ -1,0 +1,93 @@
+.wp-block-lumen-dialog .lumen-dialog-trigger {
+  border: 1px solid var(--lumen-accent, #0b5fff);
+  background: var(--lumen-accent, #0b5fff);
+  color: var(--lumen-on-accent, #fff);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.wp-block-lumen-dialog .lumen-dialog-trigger:hover {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-dialog .lumen-dialog-trigger[aria-expanded="true"] {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-dialog .lumen-dialog-template[hidden] {
+  display: none;
+}
+
+.modal.lumen-dialog-runtime {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10002;
+  width: min(92vw, 580px);
+}
+
+.wp-block-lumen-dialog .lumen-dialog-surface,
+.modal.lumen-dialog-runtime .lumen-dialog-surface {
+  background: var(--lumen-bg, #fff);
+  color: var(--lumen-text, #111827);
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 0.625rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.wp-block-lumen-dialog .lumen-dialog-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.wp-block-lumen-dialog .lumen-dialog-body {
+  margin-bottom: 1rem;
+}
+
+.wp-block-lumen-dialog .lumen-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wp-block-lumen-dialog .lumen-dialog-close {
+  border: 1px solid var(--lumen-border, #d1d5db);
+  background: var(--lumen-surface, #f8fafc);
+  color: var(--lumen-text, #111827);
+  border-radius: 0.375rem;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.wp-block-lumen-dialog.wp-block-lumen-dialog .lumen-dialog-close:hover,
+.modal.lumen-dialog-runtime .lumen-dialog-close:hover {
+  border-color: var(--lumen-accent, #0b5fff);
+}
+
+.lumen-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.62);
+  z-index: 10000;
+}
+
+[class~="modalBackdrop"] {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.62);
+  z-index: 10001;
+}
+
+body.lumen-dialog-open {
+  overflow: hidden;
+}

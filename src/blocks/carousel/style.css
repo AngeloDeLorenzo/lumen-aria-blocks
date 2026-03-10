@@ -1,0 +1,94 @@
+.wp-block-lumen-carousel.lumen-carousel {
+  max-width: 64rem;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-title {
+  margin: 0 0 0.65rem;
+}
+
+.wp-block-lumen-carousel .my-slider {
+  margin: 0;
+  padding: 0;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-slide-card {
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 0.55rem;
+  background: var(--lumen-bg, #fff);
+  color: var(--lumen-text, #111827);
+  padding: 0.85rem;
+  min-height: 8rem;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-slide-card h4 {
+  margin: 0 0 0.45rem;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-slide-card p {
+  margin: 0;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-controls button {
+  border: 1px solid var(--lumen-accent, #0b5fff);
+  background: var(--lumen-accent, #0b5fff);
+  color: var(--lumen-on-accent, #fff);
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.wp-block-lumen-carousel .tns-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.55rem 0 0.8rem;
+}
+
+.wp-block-lumen-carousel .tns-nav button {
+  width: 0.95rem;
+  height: 0.95rem;
+  padding: 0;
+  border: 1px solid var(--lumen-border, #d1d5db);
+  border-radius: 999px;
+  background: var(--lumen-bg, #fff);
+  color: transparent;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.wp-block-lumen-carousel .lumen-carousel-controls button:hover {
+  background: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  border-color: color-mix(in oklab, var(--lumen-accent, #0b5fff) 82%, #000);
+  color: var(--lumen-on-accent-strong, var(--lumen-on-accent, #fff));
+}
+
+.wp-block-lumen-carousel .lumen-carousel-controls button:disabled,
+.wp-block-lumen-carousel .lumen-carousel-controls button[aria-disabled='true'] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: saturate(0.8);
+}
+
+.wp-block-lumen-carousel .tns-nav button:hover {
+  border-color: var(--lumen-accent, #0b5fff);
+}
+
+.wp-block-lumen-carousel .tns-nav button.tns-nav-active,
+.wp-block-lumen-carousel .tns-nav button[aria-current="true"] {
+  background: var(--lumen-accent, #0b5fff);
+  border-color: var(--lumen-accent, #0b5fff);
+}
+

@@ -1,0 +1,22 @@
+# Local/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies and local artifacts
+node_modules/
+**/node_modules/
+.artifacts/
+**/.artifacts/
+playwright-report/
+**/playwright-report/
+test-results/
+**/test-results/
+coverage/
+**/coverage/
+
+# Local archives
+*.zip
+*.tar
+*.tar.gz

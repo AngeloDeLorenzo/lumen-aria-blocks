@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/button",
+  "version": "0.4.0",
+  "title": "Button",
+  "category": "lumen-accessibility",
+  "icon": "button",
+  "description": "Accessible button/toggle button powered by runtime Button module.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Action"
+    },
+    "ariaLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "rel": {
+      "type": "string",
+      "default": ""
+    },
+    "actionValue": {
+      "type": "string",
+      "default": ""
+    },
+    "actionPayload": {
+      "type": "string",
+      "default": ""
+    },
+    "isToggle": {
+      "type": "boolean",
+      "default": false
+    },
+    "pressed": {
+      "type": "boolean",
+      "default": false
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "fieldName": {
+      "type": "string",
+      "default": "lumen-button-toggle"
+    },
+    "toggleClassName": {
+      "type": "string",
+      "default": "pressed"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

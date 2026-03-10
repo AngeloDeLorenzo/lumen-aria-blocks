@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/carousel",
+  "version": "0.4.0",
+  "title": "Carousel",
+  "category": "lumen-accessibility",
+  "icon": "images-alt2",
+  "description": "Accessible carousel powered by runtime setCarousel.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Featured Slides"
+    },
+    "mode": {
+      "type": "string",
+      "default": "manual"
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "itemsDesktop": {
+      "type": "number",
+      "default": 2
+    },
+    "slides": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Slide One",
+          "content": "First slide content"
+        },
+        {
+          "title": "Slide Two",
+          "content": "Second slide content"
+        },
+        {
+          "title": "Slide Three",
+          "content": "Third slide content"
+        },
+        {
+          "title": "Slide Four",
+          "content": "Fourth slide content"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

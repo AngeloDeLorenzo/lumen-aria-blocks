@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/popup",
+  "version": "0.4.0",
+  "title": "Popup",
+  "category": "lumen-accessibility",
+  "icon": "welcome-view-site",
+  "description": "Accessible popup with runtime enhancement and keyboard fallback.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "triggerLabel": {
+      "type": "string",
+      "default": "Open Popup"
+    },
+    "popupTitle": {
+      "type": "string",
+      "default": "Popup Title"
+    },
+    "popupContent": {
+      "type": "string",
+      "default": "Popup content goes here."
+    },
+    "popupRoleLabel": {
+      "type": "string",
+      "default": "Popup Details"
+    },
+    "closeLabel": {
+      "type": "string",
+      "default": "Close"
+    },
+    "isAlert": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}

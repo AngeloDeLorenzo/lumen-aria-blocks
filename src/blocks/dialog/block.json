@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "lumen/dialog",
+  "version": "0.4.0",
+  "title": "Dialog",
+  "category": "lumen-accessibility",
+  "icon": "welcome-view-site",
+  "description": "Accessible dialog with modal and alert variants.",
+  "textdomain": "lumen-aria-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "triggerLabel": {
+      "type": "string",
+      "default": "Open Dialog"
+    },
+    "title": {
+      "type": "string",
+      "default": "Dialog Title"
+    },
+    "content": {
+      "type": "string",
+      "default": "Dialog content goes here."
+    },
+    "closeLabel": {
+      "type": "string",
+      "default": "Close"
+    },
+    "roleLabel": {
+      "type": "string",
+      "default": "Dialog"
+    },
+    "isModal": {
+      "type": "boolean",
+      "default": true
+    },
+    "isAlert": {
+      "type": "boolean",
+      "default": false
+    },
+    "closeOnBackdrop": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true
+  }
+}
+
