@@ -75,7 +75,7 @@ ARIA contracts and QA checks are maintained in the release workflow and are not 
 == Frequently Asked Questions ==
 
 = Does this plugin work without JavaScript? =
-Core content is server-rendered. Interactive enhancements require JS, but SSR content remains present and release docs define fallback expectations.
+Core content is server-rendered. Interactive enhancements require JavaScript, but the main content remains present in the markup.
 
 = Does this plugin load external CDNs? =
 No. Runtime assets are served from your WordPress site.
@@ -98,11 +98,11 @@ Accordion, Button, Carousel, Dialog, Popup, Tabs, and Tooltip.
 == Changelog ==
 
 = 0.4.0 =
-* Productized WordPress.org release workflow and packaging guidance.
-* Added stable component contracts and practical implementation recipes.
-* Added Playwright + axe-core QA suite with keyboard journeys and no-JS smoke tests.
-* Added CI workflow with QA artifact upload.
-* Added top-level third-party notices metadata for release compliance.
+* Introduced the first WordPress.org-ready public release.
+* Added seven stable accessibility-focused blocks for editorial use.
+* Strengthened keyboard, focus, and no-JS behavior across the block set.
+* Improved runtime reliability and release validation for production use.
+* Included release compliance metadata and third-party notices.
 
 = 0.3.0 =
 * Replaced full module preload strategy with block-scoped runtime initialization.
@@ -115,4 +115,4 @@ Accordion, Button, Carousel, Dialog, Popup, Tabs, and Tooltip.
 == Upgrade Notice ==
 
 = 0.4.0 =
-This release introduces QA and release governance artifacts. Rebuild deployment payloads to exclude development artifacts before publishing.
+First public WordPress.org release with the current stable block set and accessibility baseline.
