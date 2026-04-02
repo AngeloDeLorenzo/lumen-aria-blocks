@@ -88,12 +88,12 @@ Accordion, Button, Carousel, Dialog, Popup, Tabs, and Tooltip.
 
 == Screenshots ==
 
-1. Accordion block with keyboard-operable disclosure panels.
-2. Tabs block showing active state and panel relationships.
-3. Dialog block trigger and modal content surface.
-4. Tooltip block in manual mode with explicit trigger state.
-5. Carousel block with previous/next controls and pagination dots.
-6. Popup block with close control and role labeling.
+1. Accordion block in frontend output with accessible disclosure behavior and clear section structure.
+2. Accordion block in the editor with configurable items and settings for structured editorial content.
+3. Dialog block in frontend output showing a focused modal interaction for task-bound content.
+4. Button block in the editor with support for action, link, and toggle use cases.
+5. Carousel block in frontend output with keyboard-operable controls and visible slide navigation.
+6. Tooltip block in the editor with settings for concise contextual help and controlled interaction behavior.
 
 == Changelog ==
 
