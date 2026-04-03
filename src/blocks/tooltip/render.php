@@ -67,8 +67,8 @@ ob_start();
     id="<?php echo esc_attr($trigger_id); ?>"
     class="lumen-tooltip-trigger aria-tooltip"
     aria-label="<?php echo esc_attr($trigger_aria_label); ?>"
-    aria-expanded="false"
     data-tooltip="#<?php echo esc_attr($content_id); ?>"
+    <?php if ('manual' === $mode) : ?>aria-expanded="false" aria-controls="<?php echo esc_attr($content_id); ?>"<?php endif; ?>
   >
     <?php echo esc_html($trigger_text); ?>
   </button>

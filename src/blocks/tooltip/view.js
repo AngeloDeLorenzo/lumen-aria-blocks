@@ -39,9 +39,19 @@
 			} )
 		);
 
-	const setExpandedState = ( root, trigger, expanded ) => {
+	const setExpandedState = (
+		root,
+		trigger,
+		expanded,
+		exposeExpandedState = true
+	) => {
 		root.classList.toggle( 'is-open', expanded );
 		if ( trigger ) {
+			if ( ! exposeExpandedState ) {
+				trigger.removeAttribute( 'aria-expanded' );
+				return;
+			}
+
 			trigger.setAttribute(
 				'aria-expanded',
 				expanded ? 'true' : 'false'
@@ -79,10 +89,9 @@
 		tooltip.classList.add( 'lumen-tooltip-popup-fallback' );
 		tooltip.setAttribute( 'role', 'tooltip' );
 		tooltip.setAttribute( 'aria-hidden', 'true' );
-		trigger.setAttribute( 'aria-controls', tooltip.id );
-		trigger.setAttribute( 'aria-haspopup', 'true' );
 
 		const mode = root.getAttribute( 'data-tooltip-mode' ) || 'hover';
+		const exposeExpandedState = mode === 'manual';
 		const delay = Math.max(
 			0,
 			toInteger( root.getAttribute( 'data-delay' ), 0 )
@@ -100,6 +109,14 @@
 		let closeTimer = 0;
 		let autoCloseTimer = 0;
 		let isOpen = false;
+
+		if ( exposeExpandedState ) {
+			trigger.setAttribute( 'aria-controls', tooltip.id );
+			trigger.setAttribute( 'aria-expanded', 'false' );
+		} else {
+			trigger.removeAttribute( 'aria-controls' );
+			trigger.removeAttribute( 'aria-expanded' );
+		}
 
 		const clearTimers = () => {
 			window.clearTimeout( openTimer );
@@ -136,7 +153,7 @@
 			tooltip.hidden = true;
 			tooltip.setAttribute( 'aria-hidden', 'true' );
 			trigger.removeAttribute( 'aria-describedby' );
-			setExpandedState( root, trigger, false );
+			setExpandedState( root, trigger, false, exposeExpandedState );
 			OPEN_TOOLTIPS.delete( root );
 			emit( root, 'lumen:tooltip-after-close', detail );
 		};
@@ -173,7 +190,7 @@
 				tooltip.hidden = false;
 				tooltip.setAttribute( 'aria-hidden', 'false' );
 				trigger.setAttribute( 'aria-describedby', tooltip.id );
-				setExpandedState( root, trigger, true );
+				setExpandedState( root, trigger, true, exposeExpandedState );
 				OPEN_TOOLTIPS.add( root );
 
 				if ( delayTimeout > 0 ) {
@@ -271,7 +288,7 @@
 		}
 
 		tooltip.hidden = true;
-		setExpandedState( root, trigger, false );
+		setExpandedState( root, trigger, false, exposeExpandedState );
 		root.lumenTooltip = {
 			open: () => openTooltip( 'api' ),
 			close: ( source = 'api' ) => closeTooltip( source, true ),

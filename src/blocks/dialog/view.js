@@ -370,12 +370,20 @@
 			document.body.classList.remove( 'lumen-dialog-open' );
 			announce( liveRegion, boundaryEndLabel );
 
+			const restoreTarget =
+				previousFocus &&
+				previousFocus instanceof window.HTMLElement &&
+				previousFocus.isConnected &&
+				typeof previousFocus.focus === 'function'
+					? previousFocus
+					: trigger;
+
 			if (
 				restoreFocus &&
-				previousFocus &&
-				typeof previousFocus.focus === 'function'
+				restoreTarget &&
+				typeof restoreTarget.focus === 'function'
 			) {
-				previousFocus.focus();
+				restoreTarget.focus();
 			}
 
 			emit( root, 'lumen:dialog-after-close', detail );

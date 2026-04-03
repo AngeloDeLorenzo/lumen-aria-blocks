@@ -66,22 +66,6 @@
 		} );
 	};
 
-	const getFocusableElements = ( container ) => {
-		if ( ! container || ! ( container instanceof window.HTMLElement ) ) {
-			return [];
-		}
-
-		const selector =
-			'a[href], area[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), iframe, audio[controls], video[controls], [contenteditable], [tabindex]:not([tabindex="-1"])';
-
-		return Array.from( container.querySelectorAll( selector ) ).filter(
-			( node ) =>
-				node instanceof window.HTMLElement &&
-				node.offsetParent !== null &&
-				node.getAttribute( 'aria-hidden' ) !== 'true'
-		);
-	};
-
 	const setExpandedState = ( root, trigger, expanded ) => {
 		root.classList.toggle( 'is-open', expanded );
 		if ( trigger ) {
@@ -224,10 +208,6 @@
 				document.removeEventListener( 'touchstart', onOutsidePointer );
 			};
 
-			const focusables = getFocusableElements( panel );
-			if ( focusables.length > 0 ) {
-				focusables[ 0 ].focus();
-			}
 			announce( liveRegion, boundaryStartLabel );
 
 			emit( root, 'lumen:popup-after-open', detail );
@@ -235,31 +215,6 @@
 
 		const onDocumentKeydown = ( event ) => {
 			if ( ! isOpen ) {
-				return;
-			}
-
-			if ( event.key === 'Tab' ) {
-				const focusables = getFocusableElements( panel );
-				if ( ! focusables.length ) {
-					event.preventDefault();
-					panel.focus();
-					return;
-				}
-
-				const first = focusables[ 0 ];
-				const last = focusables[ focusables.length - 1 ];
-				const active = panel.ownerDocument.activeElement;
-
-				if ( event.shiftKey && active === first ) {
-					event.preventDefault();
-					last.focus();
-					return;
-				}
-
-				if ( ! event.shiftKey && active === last ) {
-					event.preventDefault();
-					first.focus();
-				}
 				return;
 			}
 

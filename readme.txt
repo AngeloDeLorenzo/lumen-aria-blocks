@@ -4,7 +4,7 @@ Tags: accessibility, aria, gutenberg, wcag, blocks
 Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 0.4.0
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,13 @@ Accordion, Button, Carousel, Dialog, Popup, Tabs, and Tooltip.
 
 == Changelog ==
 
+= 0.5.0 =
+* Refined popup behavior to keep it contextual and non-modal in normal keyboard flow.
+* Narrowed tooltip runtime semantics and limited expanded-controls state to manual mode.
+* Improved carousel autoplay behavior for reduced-motion users and keyboard interaction with controls.
+* Strengthened modal dialog guarantees around focus trapping, background masking, and focus return.
+* Expanded release-grade keyboard coverage for popup, tooltip, carousel, and dialog behavior.
+
 = 0.4.0 =
 * Introduced the first WordPress.org-ready public release.
 * Added seven stable accessibility-focused blocks for editorial use.
@@ -113,6 +120,9 @@ Accordion, Button, Carousel, Dialog, Popup, Tabs, and Tooltip.
 * Split scope to editorial/content blocks only.
 
 == Upgrade Notice ==
+
+= 0.5.0 =
+Behavioral maturity update for Popup, Tooltip, Carousel, and Dialog, with stronger keyboard and reduced-motion handling.
 
 = 0.4.0 =
 First public WordPress.org release with the current stable block set and accessibility baseline.

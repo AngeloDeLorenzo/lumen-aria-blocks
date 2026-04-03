@@ -400,8 +400,12 @@
 			root.dataset.lumenCarouselPage = String( getActivePage() );
 		};
 
-		const startAutoplay = () => {
-			if ( ! autoplay || reduceMotion ) {
+		const startAutoplay = ( source = 'programmatic' ) => {
+			if ( ! autoplay ) {
+				return;
+			}
+
+			if ( reduceMotion && source === 'initial' ) {
 				return;
 			}
 
@@ -515,7 +519,7 @@
 				if ( isAutoplaying ) {
 					stopAutoplay();
 				} else {
-					startAutoplay();
+					startAutoplay( 'user' );
 				}
 			} );
 		}
@@ -527,7 +531,7 @@
 
 		render();
 		if ( autoplay ) {
-			startAutoplay();
+			startAutoplay( 'initial' );
 		}
 
 		root.lumenCarousel = {

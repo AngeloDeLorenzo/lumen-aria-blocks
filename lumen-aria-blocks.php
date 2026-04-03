@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Lumen ARIA Blocks
  * Description: Accessibility-oriented Gutenberg blocks and runtime integrations.
- * Version: 0.4.0
+ * Version: 0.5.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: Angelo De Lorenzo
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 if (!defined('LUMEN_ARIA_BLOCKS_VERSION')) {
-    define('LUMEN_ARIA_BLOCKS_VERSION', '0.4.0');
+    define('LUMEN_ARIA_BLOCKS_VERSION', '0.5.0');
 }
 
 if (!defined('LUMEN_ARIA_BLOCKS_PATH')) {
